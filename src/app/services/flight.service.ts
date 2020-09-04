@@ -7,6 +7,7 @@ import { Observable, ObservableLike } from 'rxjs';
 })
 export class FlightService {
    baseUrl="https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices"
+   flights:any;
   constructor(private http:HttpClient) { }
     options={
      "headers":{
@@ -21,5 +22,9 @@ export class FlightService {
 
   searchFlightsService(queryForm):Observable<any>{
     return this.http.get(this.baseUrl+"/browseroutes/v1.0/US/INR/en-US/"+queryForm.from+"/"+queryForm.to+"/"+queryForm.departure+"?inboundpartialdate="+queryForm.return,this.options)
+  }
+
+  get flightList(){
+    return this.flights
   }
 }

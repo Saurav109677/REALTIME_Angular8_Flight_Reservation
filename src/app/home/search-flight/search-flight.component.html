@@ -40,7 +40,7 @@
                                                          required
                                                          [class.is-invalid]="fromVal.invalid && fromVal.touched"
                                                      >
-                                                <small class="text-success">Search for Location code.</small>
+                                                <!-- <small class="text-success">Search for Location code.</small> -->
                                                 <!-- <small id="passwordHelp" class="text-danger" *ngIf="queryForm.controls['from'].invalid && queryForm.controls['from'].touched ">
                                                      Required !
                                                 </small>       -->
@@ -50,8 +50,8 @@
                                                  
                                                    
                                             
-                                                <button class="btn aqua-gradient btn-rounded btn-sm my-0" (click)="suggestLocation(userFrom)"> <i class="fa fa-search"></i></button>
-                                          
+                                                <a href="#" (click)="suggestLocation(userFrom)"> <p   > <i  class="fa fa-search"></i> Search location</p></a>
+
                                         </fieldset>
                                     </div>
                                     
@@ -62,14 +62,16 @@
                                                  formControlName="to" 
                                                     required
                                                     [class.is-invalid]="toVal.invalid && toVal.touched">
-                                                    <small class="text-success">Search for Location code.</small>
+                                                    <!-- <small class="text-success">Search for Location code.</small> -->
                                             <!-- <small id="passwordHelp" class="text-danger" *ngIf="queryForm.controls['to'].invalid && queryForm.controls['to'].touched ">
                                                 Required !
                                            </small>       -->
                                             <datalist id="loc" >
                                                     <option *ngFor="let l of foundLocArray" [value]="l.PlaceId" >{{l.PlaceName}}</option>
                                                   </datalist>
-                                                <button class="btn aqua-gradient btn-rounded btn-sm my-0" (click)="suggestLocation(userTo)"><i class="fa fa-search"></i></button>
+                                                <!-- <button class="btn aqua-gradient btn-rounded btn-sm my-0" (click)="suggestLocation(userTo)"><i class="fa fa-search"></i></button>
+                                                 -->
+                                                 <a href="#" (click)="suggestLocation(userTo)"> <p   > <i  class="fa fa-search"></i> Search location</p></a>
                                         </fieldset>
                                     </div>
                                     <div class="col-md-6">
@@ -118,7 +120,7 @@
                                 </div>
                                 <div >
                                     <fieldset>
-                                        <button class="btn" [disabled]="queryForm.invalid">Search Flights</button>
+                                        <button class="btn" type="submit" [disabled]="queryForm.invalid">Search Flights</button>
                                     </fieldset>
                                 </div>
                             

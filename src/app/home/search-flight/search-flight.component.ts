@@ -46,11 +46,16 @@ export class SearchFlightComponent implements OnInit {
     return this.queryForm.get('return')
   }
   searchFlights(){
+    console.log('searchFlight called');
+    
     console.log(this.queryForm.value);
     this._flightService.searchFlightsService(this.queryForm.value).subscribe(
-      data=>console.log(data)
+      data=>{console.log(data)
+         this._flightService.flights=data
+         //console.log(this._flightService.flights); 
+        }
     )
-    this.router.navigate(['/listFlights'])
+     this.router.navigate(['/listFlights'])
   }
 
   suggestLocation(queryLoc){
