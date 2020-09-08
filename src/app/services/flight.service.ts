@@ -8,6 +8,7 @@ import { Observable, ObservableLike } from 'rxjs';
 export class FlightService {
    baseUrl="https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices"
    flights:any;
+
   constructor(private http:HttpClient) { }
     options={
      "headers":{
@@ -25,6 +26,7 @@ export class FlightService {
   }
 
   get flightList(){
+    console.log('get called');
     return this.flights
   }
 }

@@ -11,7 +11,8 @@ import { FooterComponent } from './home/footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
 import { FlightService } from './services/flight.service';
 import {FormsModule , ReactiveFormsModule} from '@angular/forms';
-import { ListFlightsComponent } from './list-flights/list-flights.component'
+import { ListFlightsComponent } from './list-flights/list-flights.component';
+import { NgxPaginationModule } from 'ngx-pagination'; 
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { ListFlightsComponent } from './list-flights/list-flights.component'
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    NgxPaginationModule,
     ReactiveFormsModule,
     AppRoutingModule
   ],

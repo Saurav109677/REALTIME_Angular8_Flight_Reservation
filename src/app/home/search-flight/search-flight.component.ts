@@ -16,6 +16,7 @@ export class SearchFlightComponent implements OnInit {
   userTo:string=''
   oneWay:boolean=false;
   errorMsg:string=''
+  pleaseWait:boolean=false;
   constructor(private _flightService:FlightService , private fb:FormBuilder , private router:Router) { }
 
   ngOnInit(): void {
@@ -47,15 +48,19 @@ export class SearchFlightComponent implements OnInit {
   }
   searchFlights(){
     console.log('searchFlight called');
-    
+    this.pleaseWait=true;
     console.log(this.queryForm.value);
+  
     this._flightService.searchFlightsService(this.queryForm.value).subscribe(
-      data=>{console.log(data)
+      
+      data=>{console.log("From SearchFlight"+data)
          this._flightService.flights=data
          //console.log(this._flightService.flights); 
+         this.router.navigate(['/listFlights'])
         }
+        
     )
-     this.router.navigate(['/listFlights'])
+   
   }
 
   suggestLocation(queryLoc){
