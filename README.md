@@ -1,27 +1,65 @@
-# Angular
+# Realtime Flight Reservation ( Angular 8 + Skyscanner API)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
+Check the app working : https://flight-reservation-angular.herokuapp.com/
 
-## Development server
+# Screenshots
+<img src="https://github.com/Saurav109677/REALTIME_Angular8_Flight_Reservation/blob/master/Screenshots/1.png" width=700 height=400 >
+<img src="https://github.com/Saurav109677/REALTIME_Angular8_Flight_Reservation/blob/master/Screenshots/2.png" width=700 height=400 >
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Quick Install
+Once you've downloaded the boilerplate and installed all the prerequisites, you're just a few steps away from starting to develop your MEAN application.
 
-## Code scaffolding
+The boilerplate comes pre-bundled with a `package.json` and `bower.json` files that contain the list of modules you need to start your application.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To install the dependencies, run this in the application folder from the command-line:
 
-## Build
+```bash
+$ npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+This command does a few things:
+* First it will install the dependencies needed for the application to run.
+* If you're running in a development environment, it will then also install development dependencies needed for testing and running your application.
+* When the npm packages install process is over, npm will initiate a bower install command to install all the front-end modules needed for the application
+* To update these packages later on, just run `npm update`
 
-## Running unit tests
+## Running Your Application
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run your application using npm:
 
-## Running end-to-end tests
+```bash
+$ npm start
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Your application should run on port 3000 with the *development* environment configuration, so in your browser just go to [http://localhost:3000](http://localhost:3000)
 
-## Further help
+That's it! Your application should be running. To proceed with your development, check the other sections in this documentation.
+If you encounter any problems, try the Troubleshooting section.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Explore `config/env/development.js` for development environment configuration options.
+
+### Running in Production mode
+To run your application with *production* environment configuration:
+
+```bash
+$ npm run start:prod
+```
+
+Explore `config/env/production.js` for production environment configuration options.
+
+### Running with User Seed
+To have default account(s) seeded at runtime:
+
+In Development:
+```bash
+MONGO_SEED=true npm start
+```
+It will try to seed the users 'user' and 'admin'. If one of the user already exists, it will display an error message on the console. Just grab the passwords from the console.
+
+In Production:
+```bash
+MONGO_SEED=true npm start:prod
+```
+This will seed the admin user one time if the user does not already exist. You have to copy the password from the console and save it.
+
+Api which accepts the location and returns the weather temperature in JSON form.
