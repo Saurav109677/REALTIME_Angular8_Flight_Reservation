@@ -3,8 +3,13 @@
 Check the app working : https://flight-reservation-angular.herokuapp.com/
 
 # Screenshots
-<img src="https://github.com/Saurav109677/REALTIME_Angular8_Flight_Reservation/blob/master/Screenshots/1.png" width=700 height=400 >
-<img src="https://github.com/Saurav109677/REALTIME_Angular8_Flight_Reservation/blob/master/Screenshots/2.png" width=700 height=400 >
+<img src="https://github.com/Saurav109677/REALTIME_Angular8_Flight_Reservation/blob/master/screenshots/1.PNG" width=700 height=400 >
+<br>
+<img src="https://github.com/Saurav109677/REALTIME_Angular8_Flight_Reservation/blob/master/screenshots/2.png" width=700 height=400 >
+<br>
+<img src="https://github.com/Saurav109677/REALTIME_Angular8_Flight_Reservation/blob/master/screenshots/3.png" width=700 height=400 >
+<br>
+<img src="https://github.com/Saurav109677/REALTIME_Angular8_Flight_Reservation/blob/master/screenshots/4.png" width=700 height=400 >
 
 ## Quick Install
 Once you've downloaded the boilerplate and installed all the prerequisites, you're just a few steps away from starting to develop your MEAN application.
